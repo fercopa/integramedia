@@ -166,3 +166,8 @@ Me parece muy claro el flujo que tiene en este modelo.
             <img>
         <templates>
 ```
+
+## Alguans capturas de pantalla
+![Captura 1](img/captura1.jpg)
+
+![Captura 2](img/captura2.jpg)
