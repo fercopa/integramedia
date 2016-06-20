@@ -110,27 +110,43 @@ _Escenario excepcional_:
 
 
 # Respondiendo las preguntas
-1- Imagen nivel0, nive1, foto
+1- Imagen
+
+![Diagrama de flujo](img/diagFlujo.jpg)
+
+
 2- Los bosquejos de pantalla siguen este patron ya que me parece muy limpia su navegación.
-Imagen de pantalla
+
+![Pantalla](img/plantilla.jpg)
+
 El diagrama de navegabilidad se muestra abajo. Eleqí este tipo de navegabilidad por su simplesa.
 El usuario ingresa una url, luego es parseada y se lo pasa a Views para qué esta se encargue de pasarlo a los modelos quienes son los que se comunican con la base de datos o no, y luego se lo pasa a Template para que éste se lo envíe un archivo html en forma legible y agradable.
 Me parece muy claro el flujo que tiene en este modelo.
+
+![Arquitectura](img/arqui.jpg)
 
 3- La tecnológia que sugiero para implementar es en el lenguaje de programación de Python con el framework Django ya que éste sigue el patron MVT (Models, Views and Templates). Con MySQL como base de datos ya que está soportada por el framework y porque para esta aplicación va a andar sin problemas.
 
 4- Aquí está un diagrama de Entidad-relacion con sus respectovos campos y claves primarias. Para el nombre de las tablas sería la unión de los nombres de las entidades que están relacionadas. Por ejemplo en la relacion de Usuario y Linea, el nombre sería UsuarioLinea, respetando el standard UpperCamelCase.
 
+![Entidad relacion](img/ER.jpg)
+
 5- El framework de Django nos abstrae mucho de la base de datos evitando muchos problemas. Pero si tengo que elegir entre consulta a la base de datos directas o mediante procedimientos, elegiría por procedimientos, ya que consultas directas puede tener problemas de inyección.
 
 6- Las clases que usé son estas
 
+![Diagrama de clases](img/diagrama_clases.png)
+
 7- Como mencioné anteriormente usaría el patron MVT (Models, Views and Template) o como otra opción sería el MVC (Models, Views and Controller) ya que tiene una visión clara de como fluyen los datos.
+
 
 8- Diagrama de flujo para el proceso de registración.
 
+![Diagrama de secuencia](img/secuencia.jpg)
+
 9- Estructura del proyecto:
 
+```vim
 <repositorio-proyecto>
     Readme.md
     requeriments.txt
@@ -149,3 +165,4 @@ Me parece muy claro el flujo que tiene en este modelo.
             <js>
             <img>
         <templates>
+```
