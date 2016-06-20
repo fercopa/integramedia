@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+<h2>Consultas</h2>
+{% block subconsulta %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+<p> Aqui podras consultar todo acerca de tus lineas </p>
+{% endblock %}
+
+{% block aside %}
+    <ul id='consulta'>
+        <li><a href="{% url 'personal_info_view' %}"> Informacion Personal </a></li>
+        <li><a href="{% url 'lines_view' %}"> Lineas </a></li>
+        <li><a href="{% url 'contact_view' %}"> Contactar con un representante </a></li>
+        <li><a href="{% url 'history_view' %}"> Historial de pago </a></li>
+        <li><a href="{% url 'my_consults_view' %}"> Mis consultas </a></li>
+    </ul>
+{% endblock %}

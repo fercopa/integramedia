@@ -1,0 +1,121 @@
+* {
+    margin=0;
+}
+body {
+    background: #8258FA;
+}
+
+#logout {
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+    font: bold 14px verdana, sans-serif;
+    border: 1px solid;
+    border-radius: 5px;
+    background: #8904B1;
+    color: #FFFFFF;
+}
+
+#logout:hover {
+    background: #8258FA;
+    font: bold 16px verdana, sans-serif;
+}
+
+#cabecera {
+    background: #210B61;
+    color: #FFFFFF;
+    border: 1px solid #999999;
+    padding: 20px;
+}
+
+#menu {
+    background: #1C1C1C;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+#menu li:hover {
+    background: #8258FA;
+    font: bold 18px verdana, sans-serif;
+}
+
+#menu li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+    font: bold 14px verdana, sans-serif;
+    border: 1px solid;
+    border-radius: 5px;
+    background: #8904B1;
+    color: #FFFFFF;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+#seccion {
+    width: 70%;
+    height: 80%;
+    margin: 20px;
+    float: left;
+}
+
+article {
+    background: #FFFBCC;
+    border: 1px solid #999999;
+    padding: 20px;
+    margin: 15px;
+}
+
+#lateral {
+    width: 20%;
+    margin: 20px 0px;
+    float: left;
+    padding: 20px;
+    background: #BBBBBB;
+}
+
+#pie {
+    clear: both;
+    background: #1C1C1C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #999999;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table th {
+    padding: 5px;
+    border: 1px;
+    background: #1C1C1C;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+table td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+table tr:hover{
+    background-color: #9A2EFE;
+    color: #FFFFFF;
+}
+
+#consulta li {
+    text-decoration: none;
+    list-style: none;
+}
+
+#consulta a:hover {
+    font: bold 16px verdana, sans-serif;
+}

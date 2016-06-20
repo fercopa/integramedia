@@ -1,0 +1,22 @@
+{% extends 'consult.html' %}
+
+{% block subconsulta %}
+<h3> Mis consultas realizadas </h2>
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Consultas</th>
+        <th>Detalles</th>
+    </tr>
+    {% for consulta in consultas %}
+        <tr>
+            <td> {{ consulta }} </td>
+            <td style='font-weight:bold'>
+                <a href="{% url 'detail_consult_view' consulta.id %}"> Detalle </a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

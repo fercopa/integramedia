@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <title> Mis Lineas </title>
+        <link rel='stylesheet' href = "{% static 'my_style.css' %}">
+    </head>
+    <body>
+        <div id='agrupar'>
+            <header id= 'cabecera'>
+                <h1> Portal Mis Lineas </h1>
+                <h4> {{ request.user.get_full_name }} </h4>
+                <div id='logout'>
+                    {% if not request.user.is_authenticated %}
+                        <a href="{% url 'login_view' %}"> Iniciar sesion </a>
+                    {% else %}
+                        <a href="{% url 'logout_view' %}"> Cerrar sesion </a>
+                    {% endif %}
+                </div>
+            </header>
+            <nav id='menu'>
+                <ui>
+                    <li> <a href="{% url 'index_view' %}"> Inicio </a> </li>
+                    <li> <a href="{% url 'register_view' %}"> Registrarse </a> </li>
+                    <li> <a href="{% url 'consults_view' %}"> Consultas </a> </li>
+                    <li> <a href="{% url 'unpaid_lines_view' %}"> Informar un pago </a> </li>
+                    <li> <a href="{% url 'dar_de_alta_view' %}"> Dar de alta linea </a> </li>
+                    <li> <a href="{% url 'register_line_view' %}"> Registrar linea </a> </li>
+                </ui>
+            </nav>
+            <section id='seccion'>
+                {% block seccion %}
+                {% endblock %}
+
+                {% if messages %}
+                    {% for message in messages %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+                <article>
+                    {% block content %}
+                    {% endblock %}
+                </article>
+            </section>
+            <aside id='lateral'>
+                {% block aside %}
+                {% endblock %}
+            </aside>
+            <footer id='pie'>
+                Terminos y condiciones
+            </footer>
+        </div>
+    </body>
+<html>

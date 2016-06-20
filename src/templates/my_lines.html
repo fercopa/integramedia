@@ -1,0 +1,16 @@
+{% extends 'consult.html' %}
+
+{% block subconsulta %}
+<h3> Mis lineas </h3>
+{% endblock %}
+
+{% block content %}
+<form method='POST' action=''>
+    {% csrf_token %}
+    {{ form }}
+    <input type='submit' value='Ver detalle'>
+</form>
+    <p>Plan: {{ linea.get_plan_as_string }} </p>
+    <p>Abono: ${{ linea.abono }} </p>
+    <p>Estado: {{ linea.get_status }} </p>
+{% endblock %}

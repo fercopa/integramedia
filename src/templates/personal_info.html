@@ -1,0 +1,16 @@
+{% extends 'consult.html' %}
+
+{% block subconsulta %}
+<h3> Informacion personal </h3>
+{% endblock %}
+
+{% block content %}
+    <p>Nombre de usuario: {{ user.username }} </p>
+    <p>Nombre: {{ user.first_name }} </p>
+    <p>Apellido: {{ user.last_name }} </p>
+    <p>e-mail: {{ user.email }} </p>
+    <p>Cantidad de lineas: {{ cantidad_lineas }} </p>
+    {% for linea in lineas %}
+        <p>{{ linea }}</p>
+    {% endfor %}
+{% endblock %}

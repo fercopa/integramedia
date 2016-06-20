@@ -1,0 +1,45 @@
+{% extends 'consult.html' %}
+
+{% block subconsulta %}
+<h3> Historial de mis pagos </h3>
+{% endblock %}
+
+{% block content %}
+<form method='POST' action=''>
+    {% csrf_token %}
+    {{ form }}
+    <input type='submit' value='Ver'>
+</form>
+<table>
+    <tr>
+        <th>Fecha de vencimeiento</th>
+        <th>Fecha de pago</th>
+        <th>Medio de pago</th>
+        <th>Estado</th>
+    </tr>
+    {% for pago in pagos %}
+        <tr>
+            <td> {{ pago.fecha_vencimiento }} </td>
+            {% if pago.fecha_de_pago %}
+                <td> {{ pago.fecha_de_pago }} </td>
+            {% else %}
+                <td> --- </td>
+            {% endif %}
+            {% if pago.medio != 0 %}
+                <td> {{ pago }} </td>
+            {% else %}
+                <td> --- </td>
+            {% endif %}
+            {% if pago.verificado %}
+                <td> Pagado </td>
+            {% else %}
+                {% if pago.fecha_de_pago %}
+                    <td> En proceso... </td>
+                {% else %}
+                    <td> No pagado </td>
+                {% endif %}
+            {% endif %}
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

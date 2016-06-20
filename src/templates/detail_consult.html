@@ -1,0 +1,7 @@
+{% extends 'consult.html' %}
+{% block content %}
+<p> Asunto: {{ contacto }} </p>
+<p> Medio: {{ contacto.get_medio }} </p>
+<p> Mensaje: {{ contacto.mensaje }} </p>
+<p> Document: {{ contacto.get_file_name }} </p>
+{% endblock %}

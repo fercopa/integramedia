@@ -1,0 +1,32 @@
+{% extends 'consult.html' %}
+{% block content %}
+<form method='POST' action=''>
+    {% csrf_token %}
+    {{ form }}
+    <input type='submit' value='Ver'>
+</form>
+<table>
+    <tr>
+        <th>Fecha de vencimeiento</th>
+        <th>Fecha de pago</th>
+        <th>Medio de pago</th>
+        <th>Estado</td>
+    </tr>
+    {% for pago in pagos %}
+        <tr>
+            <td> {{ pago.fecha_vencimiento }} </td>
+            <td> --- </td>
+            <td> --- </td>
+            {% if not pago.verificado %}
+                {% if pago.fecha_de_pago %}
+                    <td> En proceso... </td>
+                {% else %}
+                    <td style='font-weight:bold'>
+                        <a href="{% url 'payment_report_view' pago.id %}"> Informar pago </a>
+                    </td>
+                {% endif %}
+            {% endif %}
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
