@@ -135,7 +135,7 @@ Me parece muy claro el flujo que tiene en este modelo.
 
 6- Las clases que usé son estas
 
-![Diagrama de clases](img/diagrama_clases.png)
+![Diagrama de clases](img/diagrama_clases.jpg)
 
 7- Como mencioné anteriormente usaría el patron MVT (Models, Views and Template) o como otra opción sería el MVC (Models, Views and Controller) ya que tiene una visión clara de como fluyen los datos.
 
