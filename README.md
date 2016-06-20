@@ -168,6 +168,6 @@ Me parece muy claro el flujo que tiene en este modelo.
 ```
 
 ## Alguans capturas de pantalla
-![Captura 1](img/captura1.jpg)
+![Captura 1](img/captura1.png)
 
-![Captura 2](img/captura2.jpg)
+![Captura 2](img/captura2.png)
