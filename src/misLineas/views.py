@@ -225,6 +225,6 @@ def register_line(request):
         linea.set_abono(plan)
         linea.save()
         messages.success(request, 'Se ha registrado correctamente')
-        return HttpResponseRedirect('/mislineas/lines/')
+        return HttpResponseRedirect('/mislineas/consults/lines/')
     context = {'form':form}
     return render(request, 'register_line.html', context)
